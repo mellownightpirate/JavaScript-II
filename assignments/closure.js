@@ -4,6 +4,24 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+function founder() {
+  const motive = `products that change the world`;
+  console.log(`We need ${motive}`);
+
+  function developer() {
+    const developers = `write better code`;
+    console.log(`but ${motive} need better code!`);
+
+    function customer() {
+      const customers = 'love';
+      console.log(`If customers ${customers} ${motive} then developers will ${developers}!`)
+    }
+    customer();
+  }
+  developer();
+}
+
+founder();
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
